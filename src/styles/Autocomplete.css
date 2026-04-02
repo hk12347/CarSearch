@@ -1,0 +1,210 @@
+.non-selectable {
+	font-weight: bold;
+	color: #666; /* Optional: dimmer color for non-selectable items */
+	cursor: not-allowed !important; /* Show a 'not-allowed' cursor */
+}
+
+.non-selectable.most-searched {
+	font-weight: bold;
+	font-style: italic; /* Italicize 'Most Searched' */
+	cursor: not-allowed !important; /* Show a 'not-allowed' cursor */
+	background-color: white !important;
+}
+
+.no-scroll {
+	overflow: hidden !important; /* Prevent scrolling */
+	/* height: 50vh !important;  a fixed height */
+}
+
+.autocomplete-container {
+	position: relative;
+	width: 340px !important; /* CHANGE THIS? */
+	font-size: 100% !important;
+	font-family: "Roboto Condensed", Times !important;
+
+	white-space: nowrap;
+	display: flex; /* Use flexbox for layout */
+	justify-content: space-between; /* Space between items */
+	height: 50px; /* Set a fixed height */
+}
+
+.ac-icon {
+	display: inline-block;
+	font-size: 1rem;
+	padding-right: 10px;
+	padding-top: 2px;
+	/* float: right; */
+	position: absolute;
+	right: 10px;
+	top: 8px;
+}
+
+.ac-text {
+	float: left;
+	padding-left: 2px;
+	position: absolute;
+	top: 9px;
+}
+
+.model-text {
+	cursor: pointer;
+	padding: 5px;
+	/* border: 1px solid #ddd; */
+	border-radius: 5px;
+	/* width: 250px; */
+	display: flex;
+
+	width: 100%; /* Equivalent to w-full */
+	height: 40px;
+	border: 1px solid #cbd5e1; /* Equivalent to border and border-gray-400 */
+	/* padding: 0.75rem;  */
+	margin-bottom: 1.25rem; /* Equivalent to mb-5 */
+}
+
+.selected-option {
+	padding: 2px 5px;
+	border-radius: 1px;
+	top: 7px !important;
+	right: 9.8em !important;
+	font-weight: bold;
+	position: absolute;
+	display: inline-block;
+	justify-content: left;
+}
+
+.remove_icon {
+	background-color: #fff;
+	color: #01767e;
+	/* top: -.6em;
+    right: -2.6em; */
+	top: -0.35em !important;
+	right: -0.5em !important;
+	font-size: 27px;
+	width: 27px;
+	height: 26px;
+	border-radius: 12px;
+	text-align: center;
+	z-index: 1;
+	cursor: pointer;
+	position: absolute;
+}
+
+.remove {
+	cursor: pointer;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-right: 5px;
+	font-size: 18px; /* Increased font size */
+	font-weight: bold; /* Added bold font weight */
+}
+
+.options-container {
+	position: absolute;
+	top: 83%;
+	left: 0;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	width: 100%;
+	padding: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	overflow: auto;
+	text-align: left;
+	/* animation  */
+	opacity: 0; /* Start hidden */
+	transform: translateY(-10px); /* Start slightly above */
+	transition: opacity 0.6s ease, transform 0.6s ease; /* Animation for opacity and position */
+	visibility: hidden; /* Hide the element initially */
+	z-index: 2;
+}
+
+/* animation  */
+.options-container.show {
+	opacity: 1; /* Fully visible */
+	transform: translateY(0); /* Move to original position */
+	visibility: visible; /* Make it visible */
+}
+
+.search-input {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.options-list {
+	list-style: none;
+	padding: 0;
+	max-height: 200px; /* Fixed size with scrollbar */
+	overflow-y: auto;
+	scrollbar-width: thin; /* For Firefox */
+	scrollbar-color: transparent transparent; /* Hide scrollbar initially */
+}
+
+.options-list li {
+	padding: 5px;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+	color: black; /* Default text color */
+}
+
+.options-list:hover {
+	scrollbar-color: gray gray; /* Show scrollbar on hover for Firefox */
+	background-color: default; /* Background color on hover */
+	color: gray; /* Text color on hover */
+}
+
+.options-list li:hover {
+	color: #000000; /* Text color for the hovered item */
+	background-color: beige;
+}
+
+.options-list::-webkit-scrollbar {
+	width: 0; /* Hide scrollbar initially */
+}
+
+.options-list:hover::-webkit-scrollbar {
+	width: 3px; /* Show scrollbar on hover for Chrome, Safari, and Opera */
+}
+
+.options-list::-webkit-scrollbar-thumb {
+	background-color: gray; /* For Chrome, Safari, and Opera */
+}
+
+.options-list::-webkit-scrollbar-track {
+	background-color: gray; /* For Chrome, Safari, and Opera */
+}
+
+/* Firefox scrollbar styles */
+.options-list::-moz-scrollbar {
+	width: 0; /* Hide scrollbar initially */
+}
+
+.options-list:hover::-moz-scrollbar {
+	width: 3px; /* Show scrollbar on hover for Firefox */
+}
+
+.options-list::-moz-scrollbar-thumb {
+	background-color: gray; /* For Firefox */
+}
+
+.options-list::-moz-scrollbar-track {
+	background-color: gray; /* For Firefox */
+}
+
+/* IE and Edge scrollbar styles */
+.options-list::-ms-scrollbar {
+	width: 0; /* Hide scrollbar initially */
+}
+
+.options-list:hover::-ms-scrollbar {
+	width: 3px; /* Show scrollbar on hover for IE and Edge */
+}
+
+.options-list::-ms-scrollbar-thumb {
+	background-color: gray; /* For IE and Edge */
+}
+
+.options-list::-ms-scrollbar-track {
+	background-color: gray; /* For IE and Edge */
+}

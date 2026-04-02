@@ -1,0 +1,129 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* Navbar.css */
+.navbar {
+	background-color: #0082ba;
+	position: fixed !important;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	height: 66px;
+	box-sizing: border-box;
+}
+
+.navbar-content {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	padding: 1rem;
+	color: white;
+}
+
+.new-line {
+	white-space: pre-line;
+}
+
+.body-color {
+	background-color: black;
+}
+
+.background {
+	background-color: #3179ba;
+	-webkit-font-smoothing: antialiased;
+}
+
+.spinner_icon {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* This centers the spinner */
+	color: lightblue;
+	z-index: 1300;
+	opacity: 0.9;
+	display: block;
+	font-size: 3rem; /* Adjust the size of the spinner */
+}
+
+#spinner.show {
+	display: block;
+}
+
+/* About scroller (marquee) CSS  */
+/* https://stackoverflow.com/questions/45847392/pure-css-continuous-horizontal-text-scroll-without-break */
+
+.containerMarguee {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	width: 100px;
+	height: 100px;
+}
+
+.marquee {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	color: #f8f8ff;
+}
+
+.marquee span {
+	top: 50%;
+	left: 50%;
+
+	display: inline-block;
+	padding-left: 100%;
+	animation: marquee 10s linear infinite;
+}
+
+.marquee2 span {
+	animation-delay: 5s;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
+
+body {
+	margin: 0;
+}
+
+.disabled {
+	pointer-events: none;
+	opacity: 0.7;
+}
+
+div-space {
+	margin: 20px;
+}
+
+div-space-up {
+	margin-top: 20px;
+}
+
+/* stackoverflow ends */
